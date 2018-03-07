@@ -86,7 +86,7 @@
 			background-repeat:no-repeat;
 			margin-top: 70px;
 			margin-right: 10px;
-			padding: 10px 15px;
+			padding: 8px 15px;
 			background-size:100% 100%;
 			cursor: pointer;
 		}
@@ -124,10 +124,50 @@
 			<!--sticky menu bar-->
 			<ul id="menubar_ul">
 				<li class="bar_item"><a class="bar_btn" href="home.php">Feed</a></li>
-	  			<li class="bar_item"><a class="bar_btn" href="#news">Profile</a></li>
+	  			<li class="bar_item"><a class="bar_btn" href="profile.php">Profile</a></li>
 			  	<li class="bar_item"><a class="bar_btn" href="#contact">New Article</a></li>
 			</ul>
 		</div>
+		<div style="background-color: #ffffff;margin-top: 0;">
+			<?php
+			$dom = simplexml_load_file("xml/blogs.xml");
+			foreach($dom->blog as $blog)
+			{
+				echo "<h2>$blog->title</h2>";
+				echo "<p>$blog->description<a href='login.php'> continue reading...</a></p>";
+				//echo "<h4>Facilities:</h4>"."<br>";
+				
+				//foreach($h->Facilities->facility as $f){
+				//	echo "<li>".$f->fName."</li>";
+					
+				//}
+				//echo "<h4>Address:</h4>"."<br>";
+				//	echo $h->address."<br>";
+				//	echo $h->Distance."<br>"."<br>";
+				
+				//foreach($h->Available as $av){		
+				//	if($av=="True"){
+				//		echo "<h4>ROOM Available: YES</h4>"."<br>"."<br>"."<br>"."<br>"; 
+				//	}
+				//	else echo "<h4>ROOM Available: NO</h4>"."<br>"."<br>"."<br>"."<br>";
+				//}
+			}
+			?>
+		</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 	</div>
 	<div class="foot"><?php  include "footer.php";?></div>
 </body>
