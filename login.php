@@ -4,7 +4,6 @@
 	<link rel="icon" href="img/blog.png">
 	<title>Login | Blog</title>
 	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<style type="text/css">
 		body
 		{
@@ -20,7 +19,7 @@
 			width: 25%;
 			padding: 20px;
 			margin: auto;
-			margin-top: 200px;
+			margin-top: 150px;
 			text-align: center;
 		}
 		.input_box
