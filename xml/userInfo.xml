@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<userLogin>
+	<user>
+		<fullName>Rakibul Islam</fullName>
+		<username>rakib</username>
+		<password>rakib</password>
+		<email>rakib@aiub.edu</email>
+	</user>
+	<user>
+		<fullName>Asif Hasan</fullName>
+		<username>asif</username>
+		<password>asif</password>
+		<email>asif@aiub.edu</email>
+	</user>
+	<user>
+		<fullName>Md Saef Ullah Miah</fullName>
+		<username>saef</username>
+		<password>saef</password>
+		<email>saef@aiub.edu</email>
+	</user>
+</userLogin>
