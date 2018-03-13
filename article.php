@@ -2,7 +2,7 @@
 <html>
 <head>
 	<link rel="icon" href="img/blog.png">
-	<title>Home | Blog</title>
+	<title>Article | Blog</title>
 	<meta charset="utf-8">
 	<link rel="stylesheet" type="text/css" href="css/home.css">
 </head>
@@ -34,23 +34,31 @@
 			  	<li class="bar_item"><a class="bar_btn" href="#contact">New Article</a></li>
 			</ul>
 		</div>
-		<div id="newspage_div">
+
+		<div id="newspage_div" style="font-size: 30px;">
 			<?php
-				$dom = simplexml_load_file("xml/blogs.xml");
-				foreach($dom->blog as $blog)
-				{
+		$xml = simplexml_load_file('xml/blogs.xml');
+
+		if(isset($_GET['readbtn']))
+		{
+		   	$articleID = $_GET['article'];
+
+		   	if (empty($articleID)) {
+		   		echo "no news found";
+		   		exit;
+		   	}
+		   	else
+		   	{
+		   		foreach ($xml->blog as $blog) {
 					$id = $blog->attributes()->{'id'};
-					echo "<div class='news'>";
-					echo "<h2 class='news_headline'>$blog->title</h2>";
-					echo "<div>";
-					echo "<p style='margin: 0;'>$blog->description";
-					echo "</p></div>";
-					echo "<div style='border:none;cursor: pointer;width: 70px;'><form method='get' action='article.php'>";
-					echo "<input type='hidden' name='article' value='$id'><input type='submit' name='readbtn' value='read>>'></form>";
-					echo "</div></div>";
+					if ($id == $articleID) {
+						echo "<h2 style='margin-top: 0px;padding-top: 20px;'>$blog->title</h2>";	
+						echo "<p>$blog->details</p>";
+					}
 				}
-				unset($dom);
-			?>
+		   	}
+		}
+	?>
 		</div>
 	</div>
 	<div class="foot"><?php  include "footer.php";?></div>
