@@ -20,7 +20,7 @@
 		<div id="top_logo">
 			<a href="index.php"><img src="img/blog.png" width="130px" height="80px"></a>
 			<div style="float:right;">
-				<input id="search_btn" style="float: right" type="submit" name="searchbtn" value="Go" onclick="alert('clicked')">
+				<input id="search_btn" style="float: right" type="submit" name="searchbtn" value="Go" onclick="alert('Coming soon...')">
 				<input id="search_box" type="text" name="searchBox" placeholder="search">
 				
 			</div>

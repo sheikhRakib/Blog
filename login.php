@@ -1,47 +1,54 @@
 <?php
-    session_start();
+	session_start();
    	$userName="";
    	$password="";
    	$errors = array();
-   	
-	$XMLname = "";
-	$XMLpassword = "";
-	$XMLfullname = "";
-
-	
    	if(isset($_POST['submit']))
    	{
 	   	$userName = $_POST['userName'];
 	   	$password = $_POST['password'];
-	   
-	   	// if (empty($userName)) {
-	   	// 	array_push($errors, "Username required");
-	   	// }
-	   	// if (empty($password)) {
-	   	// 	array_push($errors, "Password required");
-	   	// }
-	   	//if (count($errors) == 0) {
-	   		$userLogin = new SimpleXMLElement("xml/userInfo.xml",null, true);
-			foreach($userLogin->user as $user)
-			{
-				$XMLname = $user->username;
-				$XMLpassword = $user->password;
-				$XMLfullname = $user->fullName;
-
-				if($userName==$XMLname && md5($password)==$XMLpassword)
-				{
-					$_SESSION["un"] = $userName;
-					$_SESSION['fisrtn'] = $XMLfullname;
-					$_SESSION['flag'] = "TRUE";
-					
-					header("location: profile.php");
-					session_write_close();
-					exit();
-				}
-			}//end of foreach
-	   	//}
+      
+	   	if (empty($userName)) {
+	   		array_push($errors, "Username required");
+	   	}
+	   	if (empty($password)) {
+	   		array_push($errors, "Password required");
+	   	}
+	   	if (count($errors) == 0) {
+	   		if(isValidUser($userName, $password)) {
+				header("location: profile.php");
+			}
+			else {
+				array_push($errors, "Wrong username/password");
+			}
+	   	}
 	}
+	function isValidUser($name, $password)
+	{
+		$XMLname = "";
+		$XMLpassword = "";
+		$XMLfullname = "";
+
+		$userLogin = simplexml_load_file("xml/userInfo.xml");
+		foreach($userLogin->user as $user)
+		{
+			$XMLname = $user->username->__toString();
+			$XMLpassword = $user->password->__toString();
+			$XMLfullname = $user->fullName->__toString();
+			if($name==$XMLname && md5($password)==$XMLpassword)
+			{
+				$fn = $XMLfullname;
+				$_SESSION['userName'] = $name;
+				$_SESSION['fullName'] = $fn;
+				$_SESSION['loggedIn'] = "TRUE";
+				return TRUE;
+			}
+		}
+	}//end of function isVaidUSer
+
+//end php
 ?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -64,13 +71,12 @@
 		<div>
 			<p>Login with your Blog username.</p>
 			<br>
-
 			<form action="" method="post">
 				<?php  include ("errors.php");?>
 			<table>
 				<tr>
 					<td>
-						<input class="input_box" type="text" name="userName" placeholder="username" autocomplete="off">
+						<input class="input_box" type="text" name="userName" placeholder="username" autocomplete="off" value="<?php echo $userName ?>">
 					</td>
 				</tr>
 				<tr>
@@ -96,7 +102,5 @@
 		</div>
 	</div>
 	<?php  include ("footer.php");?>
-	
-
 </body>
 </html>

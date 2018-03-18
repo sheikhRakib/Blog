@@ -1,242 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE blogList [
+<!ELEMENT blogList (blog)*>
+<!ELEMENT blog (title , author , description , details , tags)>
+<!ATTLIST blog id CDATA #REQUIRED>
+<!ELEMENT title (#PCDATA)>
+<!ELEMENT author (#PCDATA)>
+<!ELEMENT authorUserName (#PCDATA)>
+<!ELEMENT description (#PCDATA)>
+<!ELEMENT details (#PCDATA)>
+<!ELEMENT tags (tag)+>
+<!ELEMENT tag (#PCDATA)>
+]>
 <blogList>
-	<blog>
-		<title>Can not access or browse some websites using Dlink DIR 600L- Here is the solution</title>
-		<author>md saef ullah miah</author>
-		<description>
-			Recently I have faced a somewhat illogical problem with my newly purchased Dlink
-			DIR 600L wireless router. It was that I can not access some websites with this router. At
-			first I thought I got some issues with my dns settings
-		</description>
-		<details>
-			Recently I have faced a somewhat illogical problem with my newly purchased Dlink
-			DIR 600L wireless router. It was that I can not access some websites with this router. At
-			first I thought I got some issues with my dns settings then found out it was all ok next I
-			went for host configuration and it was also ok, then the problem was definitely with my
-			router but every configuration in that was very very ok. I wasted much time thinking about
-			that then I thought it was the ISP who is creating the problem and I went to my friends
-			home and set it up still the problem was on. Now it is definitely with the router and yes
-			it was very easy fix. As PPPoE by default use the MTU of 1492, I just changed it to 1400
-			and everything got OK. If you do not know where to change, login to router admin panel by
-			going to url 192.168.0.1, give user name and password. go to advanced settings. Now go to
-			SETUP tab and then Internet Connection and under the PPPOE find MTU and change it to 1400.
-		</details>
-		<tags>
-			<tag>Problem accessing websites</tag>
-			<tag>DLink DIR 600L can not browse some sites</tag>
-			<tag>DIR 600L</tag>
-			<tag>technology</tag>
-			<tag>hacking</tag>
-		</tags>
-	</blog>
-
-	<blog>
-		<title>Can not access or browse some websites using Dlink DIR 600L- Here is the solution</title>
-		<author>md saef ullah miah</author>
-		<description>
-			Recently I have faced a somewhat illogical problem with my newly purchased Dlink
-			DIR 600L wireless router. It was that I can not access some websites with this router. At
-			first I thought I got some issues with my dns settings
-		</description>
-		<details>
-			Recently I have faced a somewhat illogical problem with my newly purchased Dlink
-			DIR 600L wireless router. It was that I can not access some websites with this router. At
-			first I thought I got some issues with my dns settings then found out it was all ok next I
-			went for host configuration and it was also ok, then the problem was definitely with my
-			router but every configuration in that was very very ok. I wasted much time thinking about
-			that then I thought it was the ISP who is creating the problem and I went to my friends
-			home and set it up still the problem was on. Now it is definitely with the router and yes
-			it was very easy fix. As PPPoE by default use the MTU of 1492, I just changed it to 1400
-			and everything got OK. If you do not know where to change, login to router admin panel by
-			going to url 192.168.0.1, give user name and password. go to advanced settings. Now go to
-			SETUP tab and then Internet Connection and under the PPPOE find MTU and change it to 1400.
-		</details>
-		<tags>
-			<tag>Problem accessing websites</tag>
-			<tag>DLink DIR 600L can not browse some sites</tag>
-			<tag>DIR 600L</tag>
-			<tag>technology</tag>
-			<tag>hacking</tag>
-		</tags>
-	</blog>
-
-	<blog>
-		<title>Can not access or browse some websites using Dlink DIR 600L- Here is the solution</title>
-		<author>md saef ullah miah</author>
-		<description>
-			Recently I have faced a somewhat illogical problem with my newly purchased Dlink
-			DIR 600L wireless router. It was that I can not access some websites with this router. At
-			first I thought I got some issues with my dns settings
-		</description>
-		<details>
-			Recently I have faced a somewhat illogical problem with my newly purchased Dlink
-			DIR 600L wireless router. It was that I can not access some websites with this router. At
-			first I thought I got some issues with my dns settings then found out it was all ok next I
-			went for host configuration and it was also ok, then the problem was definitely with my
-			router but every configuration in that was very very ok. I wasted much time thinking about
-			that then I thought it was the ISP who is creating the problem and I went to my friends
-			home and set it up still the problem was on. Now it is definitely with the router and yes
-			it was very easy fix. As PPPoE by default use the MTU of 1492, I just changed it to 1400
-			and everything got OK. If you do not know where to change, login to router admin panel by
-			going to url 192.168.0.1, give user name and password. go to advanced settings. Now go to
-			SETUP tab and then Internet Connection and under the PPPOE find MTU and change it to 1400.
-		</details>
-		<tags>
-			<tag>Problem accessing websites</tag>
-			<tag>DLink DIR 600L can not browse some sites</tag>
-			<tag>DIR 600L</tag>
-			<tag>technology</tag>
-			<tag>hacking</tag>
-		</tags>
-	</blog>
-
-	<blog>
-		<title>Can not access or browse some websites using Dlink DIR 600L- Here is the solution</title>
-		<author>md saef ullah miah</author>
-		<description>
-			Recently I have faced a somewhat illogical problem with my newly purchased Dlink
-			DIR 600L wireless router. It was that I can not access some websites with this router. At
-			first I thought I got some issues with my dns settings
-		</description>
-		<details>
-			Recently I have faced a somewhat illogical problem with my newly purchased Dlink
-			DIR 600L wireless router. It was that I can not access some websites with this router. At
-			first I thought I got some issues with my dns settings then found out it was all ok next I
-			went for host configuration and it was also ok, then the problem was definitely with my
-			router but every configuration in that was very very ok. I wasted much time thinking about
-			that then I thought it was the ISP who is creating the problem and I went to my friends
-			home and set it up still the problem was on. Now it is definitely with the router and yes
-			it was very easy fix. As PPPoE by default use the MTU of 1492, I just changed it to 1400
-			and everything got OK. If you do not know where to change, login to router admin panel by
-			going to url 192.168.0.1, give user name and password. go to advanced settings. Now go to
-			SETUP tab and then Internet Connection and under the PPPOE find MTU and change it to 1400.
-		</details>
-		<tags>
-			<tag>Problem accessing websites</tag>
-			<tag>DLink DIR 600L can not browse some sites</tag>
-			<tag>DIR 600L</tag>
-			<tag>technology</tag>
-			<tag>hacking</tag>
-		</tags>
-	</blog>
-
-	<blog>
-		<title>Can not access or browse some websites using Dlink DIR 600L- Here is the solution</title>
-		<author>md saef ullah miah</author>
-		<description>
-			Recently I have faced a somewhat illogical problem with my newly purchased Dlink
-			DIR 600L wireless router. It was that I can not access some websites with this router. At
-			first I thought I got some issues with my dns settings
-		</description>
-		<details>
-			Recently I have faced a somewhat illogical problem with my newly purchased Dlink
-			DIR 600L wireless router. It was that I can not access some websites with this router. At
-			first I thought I got some issues with my dns settings then found out it was all ok next I
-			went for host configuration and it was also ok, then the problem was definitely with my
-			router but every configuration in that was very very ok. I wasted much time thinking about
-			that then I thought it was the ISP who is creating the problem and I went to my friends
-			home and set it up still the problem was on. Now it is definitely with the router and yes
-			it was very easy fix. As PPPoE by default use the MTU of 1492, I just changed it to 1400
-			and everything got OK. If you do not know where to change, login to router admin panel by
-			going to url 192.168.0.1, give user name and password. go to advanced settings. Now go to
-			SETUP tab and then Internet Connection and under the PPPOE find MTU and change it to 1400.
-		</details>
-		<tags>
-			<tag>Problem accessing websites</tag>
-			<tag>DLink DIR 600L can not browse some sites</tag>
-			<tag>DIR 600L</tag>
-			<tag>technology</tag>
-			<tag>hacking</tag>
-		</tags>
-	</blog>
-
-	<blog>
-		<title>Can not access or browse some websites using Dlink DIR 600L- Here is the solution</title>
-		<author>md saef ullah miah</author>
-		<description>
-			Recently I have faced a somewhat illogical problem with my newly purchased Dlink
-			DIR 600L wireless router. It was that I can not access some websites with this router. At
-			first I thought I got some issues with my dns settings
-		</description>
-		<details>
-			Recently I have faced a somewhat illogical problem with my newly purchased Dlink
-			DIR 600L wireless router. It was that I can not access some websites with this router. At
-			first I thought I got some issues with my dns settings then found out it was all ok next I
-			went for host configuration and it was also ok, then the problem was definitely with my
-			router but every configuration in that was very very ok. I wasted much time thinking about
-			that then I thought it was the ISP who is creating the problem and I went to my friends
-			home and set it up still the problem was on. Now it is definitely with the router and yes
-			it was very easy fix. As PPPoE by default use the MTU of 1492, I just changed it to 1400
-			and everything got OK. If you do not know where to change, login to router admin panel by
-			going to url 192.168.0.1, give user name and password. go to advanced settings. Now go to
-			SETUP tab and then Internet Connection and under the PPPOE find MTU and change it to 1400.
-		</details>
-		<tags>
-			<tag>Problem accessing websites</tag>
-			<tag>DLink DIR 600L can not browse some sites</tag>
-			<tag>DIR 600L</tag>
-			<tag>technology</tag>
-			<tag>hacking</tag>
-		</tags>
-	</blog>
-
-	<blog>
-		<title>Can not access or browse some websites using Dlink DIR 600L- Here is the solution</title>
-		<author>md saef ullah miah</author>
-		<description>
-			Recently I have faced a somewhat illogical problem with my newly purchased Dlink
-			DIR 600L wireless router. It was that I can not access some websites with this router. At
-			first I thought I got some issues with my dns settings
-		</description>
-		<details>
-			Recently I have faced a somewhat illogical problem with my newly purchased Dlink
-			DIR 600L wireless router. It was that I can not access some websites with this router. At
-			first I thought I got some issues with my dns settings then found out it was all ok next I
-			went for host configuration and it was also ok, then the problem was definitely with my
-			router but every configuration in that was very very ok. I wasted much time thinking about
-			that then I thought it was the ISP who is creating the problem and I went to my friends
-			home and set it up still the problem was on. Now it is definitely with the router and yes
-			it was very easy fix. As PPPoE by default use the MTU of 1492, I just changed it to 1400
-			and everything got OK. If you do not know where to change, login to router admin panel by
-			going to url 192.168.0.1, give user name and password. go to advanced settings. Now go to
-			SETUP tab and then Internet Connection and under the PPPOE find MTU and change it to 1400.
-		</details>
-		<tags>
-			<tag>Problem accessing websites</tag>
-			<tag>DLink DIR 600L can not browse some sites</tag>
-			<tag>DIR 600L</tag>
-			<tag>technology</tag>
-			<tag>hacking</tag>
-		</tags>
-	</blog>
-
-	<blog>
-		<title>Can not access or browse some websites using Dlink DIR 600L- Here is the solution</title>
-		<author>md saef ullah miah</author>
-		<description>
-			Recently I have faced a somewhat illogical problem with my newly purchased Dlink
-			DIR 600L wireless router. It was that I can not access some websites with this router. At
-			first I thought I got some issues with my dns settings
-		</description>
-		<details>
-			Recently I have faced a somewhat illogical problem with my newly purchased Dlink
-			DIR 600L wireless router. It was that I can not access some websites with this router. At
-			first I thought I got some issues with my dns settings then found out it was all ok next I
-			went for host configuration and it was also ok, then the problem was definitely with my
-			router but every configuration in that was very very ok. I wasted much time thinking about
-			that then I thought it was the ISP who is creating the problem and I went to my friends
-			home and set it up still the problem was on. Now it is definitely with the router and yes
-			it was very easy fix. As PPPoE by default use the MTU of 1492, I just changed it to 1400
-			and everything got OK. If you do not know where to change, login to router admin panel by
-			going to url 192.168.0.1, give user name and password. go to advanced settings. Now go to
-			SETUP tab and then Internet Connection and under the PPPOE find MTU and change it to 1400.
-		</details>
-		<tags>
-			<tag>Problem accessing websites</tag>
-			<tag>DLink DIR 600L can not browse some sites</tag>
-			<tag>DIR 600L</tag>
-			<tag>technology</tag>
-			<tag>hacking</tag>
-		</tags>
-	</blog>
+	
+<blog id="1">
+  <title>Blog 1</title>
+  <auther>MD Saef Ullah Miah</auther>
+  <authorUserName>saef</authorUserName>
+  <description>Blog 1 is here. Blog 1 is here. Blog 1 is here. Blog 1 is here. Blog 1 is here. Blog 1 is here. Blog 1 is here. Blog 1 is here. Blog 1 is here. Blog 1 is here. Blog 1 is here. </description>
+  <details>
+    Blog 1 is here. Blog 1 is here. Blog 1 is here. Blog 1 is here. Blog 1 is here. Blog 1 is here. Blog 1 is here. Blog 1 is here. Blog 1 is here. Blog 1 is here. Blog 1 is here. Blog 1 is here. Blog 1 is here. Blog 1 is here. Blog 1 is here. Blog 1 is here. Blog 1 is here. Blog 1 is here. Blog 1 is here. Blog 1 is here. Blog 1 is here. Blog 1 is here. Blog 1 is here. Blog 1 is here. Blog 1 is here. Blog 1 is here. Blog 1 is here. Blog 1 is here. Blog 1 is here. Blog 1 is here. Blog 1 is here. Blog 1 is here. Blog 1 is here. Blog 1 is here. Blog 1 is here. Blog 1 is here. Blog 1 is here. Blog 1 is here. Blog 1 is here. Blog 1 is here. Blog 1 is here. Blog 1 is here. Blog 1 is here. Blog 1 is here. Blog 1 is here. Blog 1 is here. Blog 1 is here. Blog 1 is here. Blog 1 is here. Blog 1 is here. Blog 1 is here. Blog 1 is here. Blog 1 is here. Blog 1 is here. Blog 1 is here. Blog 1 is here. Blog 1 is here. Blog 1 is here. Blog 1 is here. Blog 1 is here. Blog 1 is here. Blog 1 is here. Blog 1 is here. Blog 1 is here. Blog 1 is here. Blog 1 is here. Blog 1 is here. Blog 1 is here. Blog 1 is here. Blog 1 is here. Blog 1 is here. Blog 1 is here. Blog 1 is here. Blog 1 is here. Blog 1 is here. Blog 1 is here. Blog 1 is here. Blog 1 is here. Blog 1 is here. Blog 1 is here. Blog 1 is here. Blog 1 is here. Blog 1 is here. Blog 1 is here. Blog 1 is here. Blog 1 is here. Blog 1 is here. Blog 1 is here. Blog 1 is here. Blog 1 is here. Blog 1 is here. Blog 1 is here. 
+  </details>
+  <tags>
+    <tag>blog</tag>
+    <tag>story</tag>
+    <tag>life</tag>
+  </tags>
+  </blog>
 </blogList>

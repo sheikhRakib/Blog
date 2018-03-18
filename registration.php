@@ -1,50 +1,50 @@
 <?php
-	$userNameReg="";
-   	$passwordReg="";
-   	$emailReg="";
-   	$fullNameReg="";
+	$userName="";
+   	$password="";
+   	$email="";
+   	$fullName="";
+
    	$errors = array();
    	
    	if(isset($_POST['register']))
    	{
-   		$fullNameReg=$_POST['fullName'];
-	   	$userNameReg=$_POST['userName'];
-	   	$passwordReg=$_POST['password'];
-	   	$emailReg=$_POST['email'];
+   		$fullName=$_POST['fullName'];
+	   	$userName=$_POST['userName'];
+	   	$password=$_POST['password'];
+	   	$email=$_POST['email'];
 	   
-	   	if (empty($fullNameReg)) {
+	   	if (empty($fullName)) {
 	   		array_push($errors, "Full Name required");
 	   	}
-	   	if (empty($userNameReg)) {
+	   	if (empty($userName)) {
 	   		array_push($errors, "Username required");
 	   	}
-	   	if (empty($passwordReg)) {
+	   	if (empty($password)) {
 	   		array_push($errors, "Password required");
 	   	}
-	   	if (empty($emailReg)) {
+	   	if (empty($email)) {
 	   		array_push($errors, "Email required");
 	   	}
 
 	   	$xml = new SimpleXMLElement("xml/userInfo.xml",null, true);
 	   	foreach ($xml as $user) {
-			if ($user->username == $userNameReg) {
+			if ($user->username == $userName) {
 				array_push($errors, "username already exists");
+				break;
 			}
 		}
 	   	if (count($errors) == 0) {
 			$user = $xml->addChild("user", null);
-			$user->addChild("fullName",$fullNameReg);
-			$user->addChild("username",$userNameReg);
-			$user->addChild("password",md5($passwordReg));
-			$user->addChild("email",$emailReg);
-			
+			$user->addChild("fullName",$fullName);
+			$user->addChild("username",$userName);
+			$user->addChild("password",md5($password));
+			$user->addChild("email",$email);
 			$xml->asXml("xml/userInfo.xml");
 
 			header("location: login.php");
 	   	}
 	}
 ?>
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -70,10 +70,10 @@
 			<hr>
 			<form action="" method="post">
 				<?php  include ("errors.php");?>
-		   		<li><input class="input_box" type="text" name="fullName" placeholder="full name" value="<?php echo $fullNameReg ?>"></li>
-		   		<li><input class="input_box" type="text" name="userName" placeholder="username" value="<?php echo $userNameReg ?>"></li>
-		 		<li><input class="input_box" type="password" name="password" placeholder="password"></li>
-				<li><input class="input_box" type="email" name="email" placeholder="user@example.com" value="<?php echo $emailReg ?>"></li>
+		   		<li><input class="input_box" type="text" name="fullName" placeholder="full name" value="<?php echo $fullName ?>"></li>
+		   		<li><input class="input_box" type="text" name="userName" placeholder="username" value="<?php echo $userName ?>"></li>
+		 		<li><input class="input_box" type="password" name="password" placeholder="password" value="<?php echo $password ?>"></li>
+				<li><input class="input_box" type="email" name="email" placeholder="user@example.com" value="<?php echo $email ?>"></li>
 				<li><input class="btn_submit" type="submit" name="register" value="Register"></li>
 				<p>Already a member? <a href="login.php">Sign in</a></p>
 		 	</form>
