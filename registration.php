@@ -3,6 +3,7 @@
    	$password="";
    	$email="";
    	$fullName="";
+
    	$errors = array();
    	
    	if(isset($_POST['register']))
@@ -38,7 +39,6 @@
 			$user->addChild("username",$userName);
 			$user->addChild("password",md5($password));
 			$user->addChild("email",$email);
-			
 			$xml->asXml("xml/userInfo.xml");
 
 			header("location: login.php");

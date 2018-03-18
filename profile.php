@@ -24,7 +24,6 @@
 		$tags->addChild("tag",$_POST['tag3']);
 		$xml->asXml("xml/blogs.xml");
 	}
-
 ?>
 <!DOCTYPE html>
 <html>
@@ -57,6 +56,7 @@
 
 	</style>
 </head>
+
 <body>
 	<?php
 		if (isset($_SESSION['fullName'])) {

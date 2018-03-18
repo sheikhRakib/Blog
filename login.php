@@ -1,15 +1,13 @@
 <?php
 	session_start();
-
    	$userName="";
    	$password="";
    	$errors = array();
-   	
    	if(isset($_POST['submit']))
    	{
 	   	$userName = $_POST['userName'];
 	   	$password = $_POST['password'];
-	   
+      
 	   	if (empty($userName)) {
 	   		array_push($errors, "Username required");
 	   	}
@@ -51,7 +49,6 @@
 //end php
 ?>
 
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -70,6 +67,7 @@
 			<a href="index.php"><img src="img/blog.png" width="130px" height="80px"></a>
 			<hr>
 		</div>
+
 		<div>
 			<p>Login with your Blog username.</p>
 			<br>

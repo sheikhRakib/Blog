@@ -6,6 +6,7 @@
 	<meta charset="utf-8">
 	<link rel="stylesheet" type="text/css" href="css/home.css">
 </head>
+
 <body>
 	<div id="main_div">
 		<!--this division is for login and registration purpose-->
@@ -48,6 +49,7 @@
 					echo "<input type='hidden' name='article' value='$id'><input type='submit' name='readbtn' value='read>>'></form>";
 					echo "</div></div>";
 				}
+				unset($dom);
 			?>
 		</div>
 	</div>
