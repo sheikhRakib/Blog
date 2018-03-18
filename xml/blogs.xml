@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE blogList [
+<!ELEMENT blogList (blog)*>
+<!ELEMENT blog (title , author , description , details , tags)>
+<!ATTLIST blog id CDATA #REQUIRED>
+<!ELEMENT title (#PCDATA)>
+<!ELEMENT author (#PCDATA)>
+<!ELEMENT authorUserName (#PCDATA)>
+<!ELEMENT description (#PCDATA)>
+<!ELEMENT details (#PCDATA)>
+<!ELEMENT tags (tag)+>
+<!ELEMENT tag (#PCDATA)>
+]>
+<blogList>
+	
+<blog id="1"><title>Blog 1</title><auther>MD Saef Ullah Miah</auther><authorUserName>saef</authorUserName><description>Blog 1 is here. Blog 1 is here. Blog 1 is here. Blog 1 is here. Blog 1 is here. Blog 1 is here. Blog 1 is here. Blog 1 is here. Blog 1 is here. Blog 1 is here. Blog 1 is here. </description><details>Blog 1 is here. Blog 1 is here. Blog 1 is here. Blog 1 is here. Blog 1 is here. Blog 1 is here. Blog 1 is here. Blog 1 is here. Blog 1 is here. Blog 1 is here. Blog 1 is here. Blog 1 is here. Blog 1 is here. Blog 1 is here. Blog 1 is here. Blog 1 is here. Blog 1 is here. Blog 1 is here. Blog 1 is here. Blog 1 is here. Blog 1 is here. Blog 1 is here. Blog 1 is here. Blog 1 is here. Blog 1 is here. Blog 1 is here. Blog 1 is here. Blog 1 is here. Blog 1 is here. Blog 1 is here. Blog 1 is here. Blog 1 is here. Blog 1 is here. Blog 1 is here. Blog 1 is here. Blog 1 is here. Blog 1 is here. Blog 1 is here. Blog 1 is here. Blog 1 is here. Blog 1 is here. Blog 1 is here. Blog 1 is here. Blog 1 is here. Blog 1 is here. Blog 1 is here. Blog 1 is here. Blog 1 is here. Blog 1 is here. Blog 1 is here. Blog 1 is here. Blog 1 is here. Blog 1 is here. Blog 1 is here. Blog 1 is here. Blog 1 is here. Blog 1 is here. Blog 1 is here. Blog 1 is here. Blog 1 is here. Blog 1 is here. Blog 1 is here. Blog 1 is here. Blog 1 is here. Blog 1 is here. Blog 1 is here. Blog 1 is here. Blog 1 is here. Blog 1 is here. Blog 1 is here. Blog 1 is here. Blog 1 is here. Blog 1 is here. Blog 1 is here. Blog 1 is here. Blog 1 is here. Blog 1 is here. Blog 1 is here. Blog 1 is here. Blog 1 is here. Blog 1 is here. Blog 1 is here. Blog 1 is here. Blog 1 is here. Blog 1 is here. Blog 1 is here. Blog 1 is here. Blog 1 is here. Blog 1 is here. Blog 1 is here. Blog 1 is here. Blog 1 is here. </details><tags><tag>blog</tag><tag>story</tag><tag>life</tag></tags></blog></blogList>

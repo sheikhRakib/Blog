@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE userLogin [
+<!ELEMENT userLogin (user)+>
+<!ELEMENT user (fullName , username , password , email)>
+<!ELEMENT fullName (#PCDATA)>
+<!ELEMENT username (#PCDATA)>
+<!ELEMENT password (#PCDATA)>
+<!ELEMENT email (#PCDATA)>
+]>
+<userLogin><user><fullName>Rakibul Islam</fullName><username>rakib</username><password>a36949228c1d9146cace6359d88968e8</password><email>rakib@aiub.edu</email></user><user><fullName>MD Saef Ullah Miah</fullName><username>saef</username><password>fdced9dd653cb2bf4be605b992c58dcf</password><email>saef@aiub.edu</email></user></userLogin>
